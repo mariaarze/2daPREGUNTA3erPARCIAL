@@ -1,28 +1,51 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+struct amigo
+{
+ char nombre [30];
+ int edad;
+ char categoria [15];
+};
+void categorizar_agenda()
+{
+   amigo reg;
+   FILE * ptr;
+   ptr = fopen ("agenda.dat","rb+");
+   if (ptr !=NULL)
+   {
+      fread(&reg,sizeof(reg),1,ptr)
+      while(!feof(ptr)
+       {
+         if (0 <= reg.edad && reg.edad <= 12)
+          { 
+            strcpy (reg.categoria, "ninhez");
+          }
+         if (0 <= reg.edad && reg.edad <= 21)
+          { 
+            strcpy (reg.categoria, "juventud");
+          }
+         if (0 <= reg.edad && reg.edad <= 70)
+         { 
+            strcpy (reg.categoria, "adultez");
+          }
+         if (70 < reg.edad)
+          { 
+            strcpy (reg.categoria, "ancianidad");
+          }
+  fseek(ptr,sizeof(reg) * (-1), SEEK_CUR;
+  fwrite (&reg,sizeof(reg),1,ptr)
+      }
+  fclose(ptr);
+   }
+}
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
